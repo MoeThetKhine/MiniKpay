@@ -1,0 +1,6 @@
+@MiniKpay.RestApi_HostAddress = http://localhost:5258
+
+GET {{MiniKpay.RestApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

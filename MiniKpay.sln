@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{EB1A2F86-4A64-438D-B083-368649839A01}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniKpay.Database", "MiniKpay.Database\MiniKpay.Database.csproj", "{2089534A-B0D9-4E3C-9036-B768C9068566}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniKpay.Domain", "MiniKpay.Domain\MiniKpay.Domain.csproj", "{D24BB9C8-1AF9-4E10-8663-B4EC7C87929D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniKpay.RestApi", "MiniKpay.RestApi\MiniKpay.RestApi.csproj", "{3B26DE21-8C91-4F27-91BF-AB11C09A6912}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2089534A-B0D9-4E3C-9036-B768C9068566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2089534A-B0D9-4E3C-9036-B768C9068566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2089534A-B0D9-4E3C-9036-B768C9068566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2089534A-B0D9-4E3C-9036-B768C9068566}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D24BB9C8-1AF9-4E10-8663-B4EC7C87929D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D24BB9C8-1AF9-4E10-8663-B4EC7C87929D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D24BB9C8-1AF9-4E10-8663-B4EC7C87929D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D24BB9C8-1AF9-4E10-8663-B4EC7C87929D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B26DE21-8C91-4F27-91BF-AB11C09A6912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B26DE21-8C91-4F27-91BF-AB11C09A6912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B26DE21-8C91-4F27-91BF-AB11C09A6912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B26DE21-8C91-4F27-91BF-AB11C09A6912}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {219C0D58-0937-4646-B8A6-CE9D2A4E52D7}
+	EndGlobalSection
+EndGlobal
