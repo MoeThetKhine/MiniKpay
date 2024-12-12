@@ -12,4 +12,8 @@
     <Folder Include="Models\Wallet\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MiniKpay.Database\MiniKpay.Database.csproj" />
+  </ItemGroup>
+
 </Project>
