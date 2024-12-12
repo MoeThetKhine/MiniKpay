@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MiniKpay.Domain.Features.DepositWithdraw
 {
-    internal class DepositWithdrawService
+    public class DepositWithdrawService
     {
     }
 }

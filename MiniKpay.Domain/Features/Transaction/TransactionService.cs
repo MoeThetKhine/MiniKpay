@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MiniKpay.Domain.Features.Transaction
 {
-    internal class TransactionService
+    public class TransactionService
     {
     }
 }
