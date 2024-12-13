@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace MiniKpay.Database.Models;
+﻿namespace MiniKpay.Database.Models;
 
 public partial class TblDepositWithDraw
 {
