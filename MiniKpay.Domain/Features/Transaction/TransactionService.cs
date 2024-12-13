@@ -49,7 +49,7 @@ namespace MiniKpay.Domain.Features.Transaction
 
         #endregion
 
-
+        #region GetTransactionByPhoneNumberAsync
 
         public async Task<Result<List<TransactionModel>>> GetTransactionByPhoneNumberAsync(string phoneNumber)
         {
@@ -83,6 +83,8 @@ namespace MiniKpay.Domain.Features.Transaction
                 return Result<List<TransactionModel>>.SystemError(ex.Message);
             }
         }
+
+        #endregion
 
         public async Task<Result<TransactionRequestModel>> CreateTransactionAsync(TransactionRequestModel request)
         {
