@@ -78,69 +78,6 @@ namespace MiniKpay.Domain.Features.Transaction
             }
         }
 
-        //public async Task<Result<TransactionRequestModel>> CreateTransactionAsync(TransactionRequestModel request)
-        //{
-        //    Result<TransactionRequestModel> response;
-
-        //    try
-        //    {
-        //        var sender = _db.TblWallets.FirstOrDefaultAsync(x => x.MobileNumber == request.SenderMobileNo);
-        //        var receiver = _db.TblWallets.FirstOrDefaultAsync(x => x.MobileNumber == request.ReceiverMobileNo);
-
-        //        if (request.Amount <= 0)
-        //        {
-        //            return Result<TransactionRequestModel>.ValidationError("Transaction amount must be greater than 0.");
-        //        }
-        //        if(request.SenderMobileNo == request.ReceiverMobileNo)
-        //        {
-        //            return Result<TransactionRequestModel>.ValidationError("Sender and receiver phone numbers must be different.");
-        //        }
-        //        if(sender is null)
-        //        {
-        //            return Result<TransactionRequestModel>.ValidationError("Sender phone number does not exist.");
-        //        }
-        //        if (receiver is null)
-        //        {
-        //            return Result<TransactionRequestModel>.ValidationError("Receiver phone number does not exist.");
-        //        }
-        //        if(sender.Balance < request.Amount)
-        //        {
-        //            return Result<TransactionRequestModel>.ValidationError("Insufficient balance.");
-        //        }
-
-        //        var updatedSenderBalance = sender.Balance - request.Amount;
-        //        var updatedReceiverBalance = receiver.Balance + transaction.Amount;
-
-        //        sender.Balance -= request.Amount;
-        //        receiver.Balance += request.Amount;
-
-        //        _db.TblWallets.Update(sender);
-        //        _db.TblWallets.Update(receiver);
-        //        await _db.SaveChangesAsync();
-
-        //        var transaction = new Transaction
-        //        {
-        //            SenderMobileNo = request.SenderMobileNo,
-        //            ReceiverMobileNo = request.ReceiverMobileNo,
-        //            Amount = request.Amount,
-        //            TransactionDate = DateTime.UtcNow
-        //        };
-
-        //        _db.TblTransactions.Add(transaction);
-        //        await _db.SaveChangesAsync();
-
-        //        // Return success result
-        //        return Result<TransactionRequestModel>.Success(request);
-
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return Result<TransactionRequestModel>.SystemError(ex.Message);
-        //    }
-        //}
-
-
         public async Task<Result<TransactionRequestModel>> CreateTransactionAsync(TransactionRequestModel request)
         {
             try
