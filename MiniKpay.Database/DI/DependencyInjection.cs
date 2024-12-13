@@ -1,9 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using MiniKpay.Database.Models;
-
-namespace MiniKpay.Database.DI
+﻿namespace MiniKpay.Database.DI
 {
     public static class DependencyInjection
     {
