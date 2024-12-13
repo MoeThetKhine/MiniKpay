@@ -1,9 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using MiniKpay.Database.Models;
-using MiniKpay.Domain.Models;
-using MiniKpay.Domain.Models.Transaction;
-
-namespace MiniKpay.Domain.Features.Transaction;
+﻿namespace MiniKpay.Domain.Features.Transaction;
 
 public class TransactionService
 {
