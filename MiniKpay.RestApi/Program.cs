@@ -1,7 +1,3 @@
-using Microsoft.EntityFrameworkCore;
-using MiniKpay.Database.Models;
-using MiniKpay.Domain.Features.Transaction;
-
 var builder = WebApplication.CreateBuilder(args);
 
 
