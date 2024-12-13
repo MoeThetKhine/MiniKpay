@@ -69,6 +69,8 @@ public class Result<T>
 
     #endregion
 
+    #region EnumRespType
+
     public enum EnumRespType
     {
         None,
@@ -76,5 +78,7 @@ public class Result<T>
         ValidationError,
         SystemError
     }
+
+    #endregion
 
 }
