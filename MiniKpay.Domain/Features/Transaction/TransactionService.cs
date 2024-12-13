@@ -22,6 +22,11 @@ namespace MiniKpay.Domain.Features.Transaction
             {
                 var transactions = _db.TblTransactions.AsNoTracking();
 
+                if (transactions is null)
+                {
+                    return Result<List<TransactionModel>>.ValidationError("No transactions found.");
+                }
+
                 var lst = await transactions.Select(x=> new TransactionModel()
                 {
                     TransferId = x.TransferId,
