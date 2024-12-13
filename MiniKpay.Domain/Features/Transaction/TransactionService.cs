@@ -148,31 +148,7 @@ namespace MiniKpay.Domain.Features.Transaction
 
         #endregion
 
-
-
-        //    var updatedSenderBalance = sender.Balance - transaction.Amount;
-        //    var updatedReceiverBalance = receiver.Balance + transaction.Amount;
-
-        //    int updateSenderResult = await _dA_Transaction.UpdateUserBalanceAsync(transaction.FromPhoneNumber, updatedSenderBalance);
-        //    if (updateSenderResult == 0)
-        //    {
-        //        return Result<string>.SystemError(null, "Failed to update sender's balance.");
-        //    }
-
-        //    int updateReceiverResult = await _dA_Transaction.UpdateUserBalanceAsync(transaction.ToPhoneNumber, updatedReceiverBalance);
-        //    if (updateReceiverResult == 0)
-        //    {
-        //        return Result<string>.SystemError(null, "Failed to update receiver's balance.");
-        //    }
-
-        //    int insertResult = await _dA_Transaction.CreateTransactionAsync(transaction);
-        //    if (insertResult <= 0)
-        //    {
-        //        return Result<string>.SystemError(null, "Transaction process failed.");
-        //    }
-
-        //    return Result<string>.Success("Transaction completed successfully.");
-        //}
+        #region GetUserByPhoneNumberAsync
 
         public async Task GetUserByPhoneNumberAsync(string phoneNumber)
         {
@@ -181,6 +157,8 @@ namespace MiniKpay.Domain.Features.Transaction
                 .FirstOrDefaultAsync();
             return;
         }
+
+        #endregion
 
     }
 }
