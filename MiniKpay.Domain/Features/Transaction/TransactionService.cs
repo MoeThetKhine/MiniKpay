@@ -86,6 +86,8 @@ namespace MiniKpay.Domain.Features.Transaction
 
         #endregion
 
+        #region CreateTransactionAsync
+
         public async Task<Result<TransactionRequestModel>> CreateTransactionAsync(TransactionRequestModel request)
         {
             try
@@ -143,6 +145,8 @@ namespace MiniKpay.Domain.Features.Transaction
                 return Result<TransactionRequestModel>.SystemError($"An error occurred: {ex.Message}");
             }
         }
+
+        #endregion
 
 
 
