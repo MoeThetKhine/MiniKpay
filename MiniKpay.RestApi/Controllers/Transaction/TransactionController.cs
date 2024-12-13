@@ -32,6 +32,8 @@ public class TransactionController : ControllerBase
 
     #endregion
 
+    #region GetTransactionByPhoneNumberAsync
+
     [HttpGet("{phoneNumber}")]
     public async Task<IActionResult> GetTransactionByPhoneNumberAsync(string phoneNumber)
     {
@@ -48,6 +50,8 @@ public class TransactionController : ControllerBase
             });
         }
     }
+
+    #endregion
 
     [HttpPost]
     public async Task<IActionResult> CreateTransactionAsync(TransactionRequestModel request)
