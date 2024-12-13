@@ -54,6 +54,8 @@ public class Result<T>
 
     #endregion
 
+    #region SystemError
+
     public static Result<T> SystemError(string message, T? data = default)
     {
         return new Result<T>()
@@ -64,6 +66,8 @@ public class Result<T>
             Message = message
         };
     }
+
+    #endregion
 
     public enum EnumRespType
     {
