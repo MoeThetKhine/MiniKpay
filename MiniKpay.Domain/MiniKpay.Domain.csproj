@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Models\DepositWithdraw\" />
-    <Folder Include="Models\Transaction\" />
     <Folder Include="Models\Wallet\" />
   </ItemGroup>
 
