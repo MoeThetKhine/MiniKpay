@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using MiniKpay.Database.Models;
 using MiniKpay.Domain.Features.Transaction;
+using MiniKpay.Domain.Features.Wallet;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,8 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 }, ServiceLifetime.Transient, ServiceLifetime.Transient);
 
 builder.Services.AddScoped<TransactionService>();
+
+builder.Services.AddScoped<WalletService>();
 
 var app = builder.Build();
 
