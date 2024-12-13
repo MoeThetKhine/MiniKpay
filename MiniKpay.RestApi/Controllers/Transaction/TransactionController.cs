@@ -31,7 +31,23 @@ namespace MiniKpay.RestApi.Controllers.Transaction
                 });
             }
         }
+        [HttpGet("{phoneNumber}")]
+        public async Task<IActionResult> GetTransactionByPhoneNumberAsync(string phoneNumber)
+        {
+            try
+            {
+                var lst = await _service.GetTransactionByPhoneNumberAsync(phoneNumber);
+                return Ok(lst);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    error = ex.Message
+                });
+            }
+        }
 
-       
+
     }
 }
