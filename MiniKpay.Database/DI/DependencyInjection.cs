@@ -1,5 +1,7 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MiniKpay.Database.Models;
 
 namespace MiniKpay.Database.DI
 {
@@ -7,10 +9,10 @@ namespace MiniKpay.Database.DI
     {
         public static IServiceCollection AddDependencies(this IServiceCollection services, IConfiguration configuration)
         {
-        //    services.AddDbContext<AppDbContext>(opt =>
-        //    {
-        //        opt.UseSqlServer(configuration.GetConnectionString("DbConnection"));
-        //    }, ServiceLifetime.Transient, ServiceLifetime.Transient);
+            services.AddDbContext<AppDbContext>(opt =>
+            {
+                opt.UseSqlServer(configuration.GetConnectionString("DbConnection"));
+            }, ServiceLifetime.Transient, ServiceLifetime.Transient);
 
         //    services.AddScoped<DepositWithdrawService>();
         //    services.AddScoped<WalletService>();
