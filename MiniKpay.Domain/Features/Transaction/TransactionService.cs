@@ -14,6 +14,8 @@ namespace MiniKpay.Domain.Features.Transaction
             _db = db;
         }
 
+        #region GetTransactionAsync
+
         public async Task<Result<List<TransactionModel>>> GetTransactionAsync()
         {
             Result<List<TransactionModel>> response;
@@ -44,6 +46,10 @@ namespace MiniKpay.Domain.Features.Transaction
                 return Result<List<TransactionModel>>.SystemError(ex.Message);
             }
         }
+
+        #endregion
+
+
 
         public async Task<Result<List<TransactionModel>>> GetTransactionByPhoneNumberAsync(string phoneNumber)
         {
