@@ -1,5 +1,7 @@
 ﻿namespace MiniKpay.Database.Models;
 
+#region TblWallet
+
 public partial class TblWallet
 {
     public int UserId { get; set; }
@@ -12,3 +14,5 @@ public partial class TblWallet
 
     public decimal? Balance { get; set; }
 }
+
+#endregion
