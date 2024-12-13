@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MiniKpay.Domain.Features.Transaction;
+using MiniKpay.Domain.Models.Transaction;
 
 namespace MiniKpay.RestApi.Controllers.Transaction
 {
@@ -49,6 +50,22 @@ namespace MiniKpay.RestApi.Controllers.Transaction
             }
         }
 
+        [HttpPost]
+        public async Task<IActionResult> CreateTransactionAsync(TransactionRequestModel request)
+        {
+            try
+            {
+                var item = await _service.CreateTransactionAsync(request);
+                return Ok(item);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    error = ex.Message
+                });
+            }
+        }
 
     }
 }
