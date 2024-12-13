@@ -11,6 +11,8 @@ public class TransactionController : ControllerBase
         _service = service;
     }
 
+    #region GetTransactionAsync
+
     [HttpGet]
     public async Task<IActionResult> GetTransactionAsync()
     {
@@ -27,6 +29,8 @@ public class TransactionController : ControllerBase
             });
         }
     }
+
+    #endregion
 
     [HttpGet("{phoneNumber}")]
     public async Task<IActionResult> GetTransactionByPhoneNumberAsync(string phoneNumber)
