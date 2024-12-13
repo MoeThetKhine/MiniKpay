@@ -39,6 +39,8 @@ public class Result<T>
 
     #endregion
 
+    #region ValidationError
+
     public static Result<T> ValidationError(string message, T? data = default)
     {
         return new Result<T>()
@@ -49,6 +51,8 @@ public class Result<T>
             Message = message
         };
     }
+
+    #endregion
 
     public static Result<T> SystemError(string message, T? data = default)
     {
