@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
-
-namespace MiniKpay.Database.Models;
+﻿namespace MiniKpay.Database.Models;
 
 public partial class AppDbContext : DbContext
 {
