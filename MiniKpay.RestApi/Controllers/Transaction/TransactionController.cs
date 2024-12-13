@@ -1,8 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MiniKpay.Domain.Features.Transaction;
-using MiniKpay.Domain.Models.Transaction;
-
-namespace MiniKpay.RestApi.Controllers.Transaction
+﻿namespace MiniKpay.RestApi.Controllers.Transaction
 {
     [Route("api/[controller]")]
     [ApiController]
