@@ -1,5 +1,7 @@
 ﻿namespace MiniKpay.Domain.Models.DepositWithdraw;
 
+#region DepositWithdrawResModel
+
 public class DepositWithdrawResModel
 {
     public string MobileNumber { get; set; } = null!;
@@ -7,3 +9,5 @@ public class DepositWithdrawResModel
     public decimal Amount { get; set; }
     public string TransactionType { get; set; } = null!;
 }
+
+#endregion
