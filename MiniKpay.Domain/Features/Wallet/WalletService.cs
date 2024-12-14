@@ -91,6 +91,8 @@ public class WalletService
 
     #endregion
 
+    #region ChangePin
+
     public async Task<Result<UserResponseModel>> ChangePin(int id , string newPin )
     {
         try
@@ -126,8 +128,8 @@ public class WalletService
             return Result<UserResponseModel>.SystemError(ex.Message);
 
         }
-
     }
 
-  
+    #endregion
+
 }
