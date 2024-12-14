@@ -1,4 +1,5 @@
-﻿using MiniKpay.Domain.Models.DepositWithdraw;
+﻿namespace MiniKpay.Domain.Features.Transaction;
+
 public class DepositWithdrawService
 {
     private readonly AppDbContext _db;
@@ -7,6 +8,8 @@ public class DepositWithdrawService
     {
         _db = db;
     }
+
+    #region Deposit
 
     public async Task<Result<DepositWithdrawResModel>> Deposit(TblDepositWithDraw depositRequest, int Id)
     {
@@ -48,6 +51,10 @@ public class DepositWithdrawService
             return Result<DepositWithdrawResModel>.SystemError($"Deposit failed: {ex.Message}");
         }
     }
+
+    #endregion
+
+    #region Withdraw
 
     public async Task<Result<DepositWithdrawResModel>> Withdraw(TblDepositWithDraw reqWithdraw, int Id)
     {
@@ -96,4 +103,5 @@ public class DepositWithdrawService
             return Result<DepositWithdrawResModel>.SystemError($"Withdrawal failed: {ex.Message}");
         }
     }
+    #endregion
 }
