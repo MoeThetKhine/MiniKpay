@@ -1,5 +1,7 @@
 ﻿namespace MiniKpay.Domain.Models.User;
 
+#region UserReqModel
+
 public class UserReqModel
 {
     public string UserName { get; set; } = null!;
@@ -9,5 +11,6 @@ public class UserReqModel
     public string PinCode { get; set; } = null!;
 
     public decimal? Balance { get; set; }
-
 }
+
+#endregion
