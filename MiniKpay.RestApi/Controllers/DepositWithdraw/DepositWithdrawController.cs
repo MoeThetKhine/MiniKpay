@@ -11,22 +11,26 @@ public class DepositWithdrawController : ControllerBase
         _depositWithdrawService = depositWithdrawService;
     }
 
+    #region Deposit
+
     [HttpPost ("deposit")]
     public async Task<IActionResult> Deposit(TblDepositWithDraw depositRequest, int Id)
-
     {
-
         var user = await _depositWithdrawService.Deposit(depositRequest,Id);
         return Ok(user);
     }
 
+    #endregion
+
+    #region Withdraw
+
     [HttpPost ("withdraw")]
     public async Task<IActionResult> Withdraw(TblDepositWithDraw reqWithdraw, int Id)
-
     {
-
         var user = await _depositWithdrawService.Withdraw(reqWithdraw,Id);
         return Ok(user);
     }
+
+    #endregion
 
 }
