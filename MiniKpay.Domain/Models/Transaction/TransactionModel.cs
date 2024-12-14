@@ -1,5 +1,7 @@
 ﻿namespace MiniKpay.Domain.Models.Transaction;
 
+#region TransactionModel
+
 public class TransactionModel
 {
     public int TransferId { get; set; }
@@ -12,3 +14,5 @@ public class TransactionModel
 
     public string? Notes { get; set; }
 }
+
+#endregion
