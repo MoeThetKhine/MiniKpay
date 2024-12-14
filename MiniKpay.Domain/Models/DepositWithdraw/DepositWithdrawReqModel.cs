@@ -1,8 +1,9 @@
 ﻿namespace MiniKpay.Domain.Models.DepositWithdraw;
 
+#region TblDepositWithdraw
+
 public class TblDepositWithdraw
 {
-
     public string MobileNumber { get; set; } = null!;
 
     public DateTime Date { get; set; }
@@ -11,3 +12,5 @@ public class TblDepositWithdraw
 
     public string TransactionType { get; set; } = null!;
 }
+
+#endregion
