@@ -2,27 +2,29 @@
 
 public partial class AppDbContext : DbContext
 {
-    //public AppDbContext()
-    //{
-    //}
 
     public AppDbContext(DbContextOptions<AppDbContext> options)
         : base(options)
     {
     }
 
-    public virtual DbSet<TblDepositWithDraw> TblDepositWithdraws { get; set; }
+    #region DbSet
+
+    public virtual DbSet<TblDepositWithDraw> TblDepositWithDraws { get; set; }
 
     public virtual DbSet<TblTransaction> TblTransactions { get; set; }
 
     public virtual DbSet<TblWallet> TblWallets { get; set; }
 
-//    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-//        => optionsBuilder.UseSqlServer("Server=.;Database=DigitalWallet;User Id=sa;Password=sasa@123;TrustServerCertificate=True;");
+    #endregion
+
+    #region OnModelCreating
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+
+        #region TblDepositWithDraw
+
         modelBuilder.Entity<TblDepositWithDraw>(entity =>
         {
             entity.HasKey(e => e.DepositId).HasName("PK__TblDepos__AB60DF714CAC3803");
@@ -38,6 +40,10 @@ public partial class AppDbContext : DbContext
                 .IsUnicode(false);
             entity.Property(e => e.TransactionType).HasMaxLength(50);
         });
+
+        #endregion
+
+        #region TblTransaction
 
         modelBuilder.Entity<TblTransaction>(entity =>
         {
@@ -55,6 +61,10 @@ public partial class AppDbContext : DbContext
                 .IsUnicode(false);
         });
 
+        #endregion
+
+        #region TblWallet
+
         modelBuilder.Entity<TblWallet>(entity =>
         {
             entity.HasKey(e => e.UserId).HasName("PK__TblWalle__1788CC4CB659FCAD");
@@ -71,8 +81,12 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.UserName).HasMaxLength(50);
         });
 
+        #endregion
+
         OnModelCreatingPartial(modelBuilder);
     }
+
+    #endregion
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

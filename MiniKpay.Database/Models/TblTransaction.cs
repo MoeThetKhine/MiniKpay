@@ -1,5 +1,7 @@
 ﻿namespace MiniKpay.Database.Models;
 
+#region TblTransaction
+
 public partial class TblTransaction
 {
     public int TransferId { get; set; }
@@ -11,5 +13,7 @@ public partial class TblTransaction
     public decimal? Amount { get; set; }
 
     public string? Notes { get; set; }
-
 }
+
+#endregion
+

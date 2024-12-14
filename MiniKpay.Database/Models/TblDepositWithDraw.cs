@@ -1,5 +1,7 @@
 ﻿namespace MiniKpay.Database.Models;
 
+#region TblDepositWithDraw
+
 public partial class TblDepositWithDraw
 {
     public int DepositId { get; set; }
@@ -12,3 +14,5 @@ public partial class TblDepositWithDraw
 
     public string TransactionType { get; set; } = null!;
 }
+
+#endregion

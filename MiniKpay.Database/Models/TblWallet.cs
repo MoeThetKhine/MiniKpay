@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿namespace MiniKpay.Database.Models;
 
-namespace MiniKpay.Database.Models;
+#region TblWallet
 
 public partial class TblWallet
 {
@@ -15,3 +14,5 @@ public partial class TblWallet
 
     public decimal? Balance { get; set; }
 }
+
+#endregion
