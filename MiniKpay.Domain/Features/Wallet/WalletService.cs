@@ -103,15 +103,22 @@ public class WalletService
 
             var user = await _db.TblWallets.FirstOrDefaultAsync(u => u.UserId == id);
 
+            if(user is null)
+            {
+                model = Result<UserResponseModel>.ValidationError("User are not found");
+                goto Result;
+            }
 
             if (string.IsNullOrWhiteSpace(newPin))
             {
                 model = Result<UserResponseModel>.ValidationError("Pin code cannot be empty.");
+                goto Result;
             }
 
             if (newPin.Length != 6)
             {
                 model = Result<UserResponseModel>.ValidationError("Pin code must be exactly 6 characters.");
+                goto Result;
             }
 
             user.PinCode = newPin;
@@ -122,7 +129,7 @@ public class WalletService
                 Wallet = user,
 
             };
-
+            Result:
             return model;
         }
         catch (Exception ex)
