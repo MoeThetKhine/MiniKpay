@@ -122,6 +122,7 @@ public class WalletService
             }
 
             user.PinCode = newPin;
+            _db.TblWallets.Update(user);
             await _db.SaveChangesAsync();
 
             var responseModel = new UserResponseModel
@@ -129,7 +130,10 @@ public class WalletService
                 Wallet = user,
 
             };
-            Result:
+
+            model = Result<UserResponseModel>.Success(responseModel);
+
+        Result:
             return model;
         }
         catch (Exception ex)

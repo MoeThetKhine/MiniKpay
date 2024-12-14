@@ -78,7 +78,7 @@ public class DepositWithdrawService
             }
 
 
-            user.Balance -= withdraw.Amount;
+            user.Balance -= reqWithdraw.Amount;
 
 
             var transaction = new DepositWithdrawResModel
@@ -89,7 +89,7 @@ public class DepositWithdrawService
             };
 
            
-            _db.TblDepositWithDraws.Add(withdraw); 
+            _db.TblDepositWithDraws.Add(reqWithdraw); 
             await _db.SaveChangesAsync();
 
              model = Result<DepositWithdrawResModel>.Success(transaction, "Withdrawal completed successfully.");

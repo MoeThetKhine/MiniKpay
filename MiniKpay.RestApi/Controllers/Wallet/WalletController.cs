@@ -38,7 +38,7 @@ public class WalletController : ControllerBase
 
     #region ChangePin
 
-    [HttpPost("change-pin")]
+    [HttpPut("change-pin")]
     public async Task<IActionResult> ChangePin(int id,string newPin)
     {
         var user = await _walletService.ChangePin(id,newPin);
