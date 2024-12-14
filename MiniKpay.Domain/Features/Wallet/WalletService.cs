@@ -1,4 +1,6 @@
-﻿namespace MiniKpay.Domain.Features.Wallet;
+﻿using MiniKpay.Domain.Models.User;
+
+namespace MiniKpay.Domain.Features.Wallet;
 
 public class WalletService
 {

@@ -4,3 +4,4 @@ global using MiniKpay.Domain.Models;
 global using MiniKpay.Domain.Models.Transaction;
 global using MiniKpay.Domain.Models.DepositWithdraw;
 global using MiniKpay.Domain.Models.User;
+

@@ -1,4 +1,6 @@
-﻿namespace MiniKpay.RestApi.Controllers.Wallet;
+﻿using MiniKpay.Domain.Features.Wallet;
+
+namespace MiniKpay.RestApi.Controllers.Wallet;
 
 [Route("api/[controller]")]
 [ApiController]
