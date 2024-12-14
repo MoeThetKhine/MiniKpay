@@ -1,5 +1,3 @@
-using MiniKpay.Domain.Features.Wallet;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
