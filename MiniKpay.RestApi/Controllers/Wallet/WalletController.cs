@@ -34,12 +34,15 @@ public class WalletController : ControllerBase
 
     #endregion
 
+    #region ChangePin
+
     [HttpPost("change-pin")]
     public async Task<IActionResult> ChangePin(int id,string newPin)
-
     {
-
         var user = await _walletService.ChangePin(id,newPin);
         return Ok(user);
     }
+
+    #endregion
+
 }
