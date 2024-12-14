@@ -19,7 +19,7 @@ public class DepositWithdrawService
         {
             Result<DepositWithdrawResModel> model = new Result<DepositWithdrawResModel>();
 
-            var withdraw = await _db.TblDepositWithdraws.FirstOrDefaultAsync(x => x.DepositId == Id);
+            var withdraw = await _db.TblDepositWithDraws.FirstOrDefaultAsync(x => x.DepositId == Id);
             var user = await _db.TblWallets.FirstOrDefaultAsync(x => x.UserId == Id);
 
             if (user is null)
@@ -39,7 +39,7 @@ public class DepositWithdrawService
             };
 
      
-            _db.TblDepositWithdraws.Add(depositRequest); 
+            _db.TblDepositWithDraws.Add(depositRequest); 
             await _db.SaveChangesAsync();
            
             model = Result<DepositWithdrawResModel>.Success(transaction, "Deposit completed successfully.");
@@ -61,7 +61,7 @@ public class DepositWithdrawService
 
             Result<DepositWithdrawResModel> model = new Result<DepositWithdrawResModel>();
 
-            var withdraw= await _db.TblDepositWithdraws.FirstOrDefaultAsync(x => x.DepositId == Id);
+            var withdraw= await _db.TblDepositWithDraws.FirstOrDefaultAsync(x => x.DepositId == Id);
             var user = await _db.TblWallets.FirstOrDefaultAsync(x => x.UserId == Id);
 
             if (user is null)
@@ -87,7 +87,7 @@ public class DepositWithdrawService
             };
 
            
-            _db.TblDepositWithdraws.Add(withdraw); 
+            _db.TblDepositWithDraws.Add(withdraw); 
             await _db.SaveChangesAsync();
 
              model = Result<DepositWithdrawResModel>.Success(transaction, "Withdrawal completed successfully.");
