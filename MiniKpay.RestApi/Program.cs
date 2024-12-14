@@ -1,3 +1,5 @@
+using MiniKpay.Domain.Features.Wallet;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
@@ -13,6 +15,8 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 }, ServiceLifetime.Transient, ServiceLifetime.Transient);
 
 builder.Services.AddScoped<TransactionService>();
+builder.Services.AddScoped<WalletService>();
+builder.Services.AddScoped<DepositWithdrawService>();
 
 #endregion
 
