@@ -7,8 +7,8 @@ using MiniKpay.Database.Models;
 
 namespace MiniKpay.Domain.Models.User
 {
-   public  class UserResponseModel
+    public class UserResponseModel
     {
-        public TblWallet? WalletUser { get; set; }
+     public TblWallet? Wallet{ get; set; }
     }
 }

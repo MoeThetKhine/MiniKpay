@@ -13,10 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\DepositWithdraw\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\MiniKpay.Database\MiniKpay.Database.csproj" />
   </ItemGroup>
 

@@ -20,6 +20,8 @@ builder.Services.AddScoped<TransactionService>();
 
 builder.Services.AddScoped<WalletService>();
 
+builder.Services.AddScoped<DepositWithdrawService>();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())

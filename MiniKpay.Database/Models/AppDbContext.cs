@@ -11,7 +11,7 @@ public partial class AppDbContext : DbContext
     {
     }
 
-    public virtual DbSet<TblDepositWithDraw> TblDepositWithDraws { get; set; }
+    public virtual DbSet<TblDepositWithDraw> TblDepositWithdraws { get; set; }
 
     public virtual DbSet<TblTransaction> TblTransactions { get; set; }
 
