@@ -9,6 +9,8 @@ public class WalletService
         _db = db;
     }
 
+    #region GetUserAsync
+
     public async Task <Result<List<UserResponseModel>> >GetUserAsync(int id)
     {
         Result<List<UserResponseModel>> model;
@@ -42,6 +44,10 @@ public class WalletService
             return Result<List<UserResponseModel>>.SystemError(ex.Message);
         }
     }
+
+    #endregion
+
+    #region CreateUserAsync
 
     public async Task<Result<UserResponseModel>> CreateUserAsync( TblWallet user )
     {
@@ -82,6 +88,8 @@ public class WalletService
             return Result<UserResponseModel>.SystemError(ex.Message);
         }
     }
+
+    #endregion
 
     public async Task<Result<UserResponseModel>> ChangePin(int id , string newPin )
     {
