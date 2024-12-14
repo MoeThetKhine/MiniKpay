@@ -1,6 +1,4 @@
-﻿using MiniKpay.Domain.Models.DepositWithdraw;
-
-namespace MiniKpay.Domain.Features.Transaction;
+﻿namespace MiniKpay.Domain.Features.Transaction;
 
 public class DepositWithdrawService
 {
