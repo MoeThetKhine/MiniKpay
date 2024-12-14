@@ -1,5 +1,7 @@
 ﻿namespace MiniKpay.Domain.Models.Transaction;
 
+#region TransactionRequestModel
+
 public class TransactionRequestModel
 {
     public string SenderMobileNo { get; set; } = null!;
@@ -10,3 +12,5 @@ public class TransactionRequestModel
 
     public string? Notes { get; set; }
 }
+
+#endregion
